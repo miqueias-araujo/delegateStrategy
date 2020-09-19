@@ -2,10 +2,10 @@
     Implements IMediator
     Sub New()
         DictProperties_KeyStringControlName_ValueDict_KeyStringControlPropertyName_ValueStringPropertyValue = New Dictionary(Of String, Dictionary(Of String, String))
-        DictHelpers_KeyStringNameProperty_ValueIHelper = New Dictionary(Of String, IHelper)
         DictPropertiesControlNames_KeyStringNameProperty_ValueListOfStringControlName = New Dictionary(Of String, List(Of String))
         DictControlNamePropertyName_KeyStringControlName_ValueStringPropertyName = New Dictionary(Of String, String)
-        DictHelpers_KeyStringNameProperty_ValueIHelper.Add("Name", New ValidateName()
+        DictHelpers_KeyStringNameProperty_ValueIHelper = New Dictionary(Of String, IHelper)
+        DictHelpers_KeyStringNameProperty_ValueIHelper.Add("Name", New Helper(New ValidateName().getValidator))
     End Sub
 
     Private Property DictProperties_KeyStringControlName_ValueDict_KeyStringControlPropertyName_ValueStringPropertyValue As Dictionary(Of String, Dictionary(Of String, String)) Implements IMediator.DictProperties_KeyStringControlName_ValueDict_KeyStringControlPropertyName_ValueStringPropertyValue
@@ -16,7 +16,8 @@
 
     Private Property DictControlNamePropertyName_KeyStringControlName_ValueStringPropertyName As Dictionary(Of String, String) Implements IMediator.DictControlNamePropertyName_KeyStringControlName_ValueStringPropertyName
 
-    Public Sub ValidateControl(p_controlName As String) Implements IMediator.ValidateControl
+    Public Sub ValidateControl(p_controlName As String, p_value As String) Implements IMediator.ValidateControl
+        DictProperties_KeyStringControlName_ValueDict_KeyStringControlPropertyName_ValueStringPropertyValue(p_controlName)("Value") = p_value
         Dim propertyName As String = DictControlNamePropertyName_KeyStringControlName_ValueStringPropertyName(p_controlName)
         Dim value As String = DictProperties_KeyStringControlName_ValueDict_KeyStringControlPropertyName_ValueStringPropertyValue(p_controlName)("Value")
         Dim reponseValidation As String = DictHelpers_KeyStringNameProperty_ValueIHelper(propertyName).Validate(value)

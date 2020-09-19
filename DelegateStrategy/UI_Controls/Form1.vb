@@ -10,10 +10,10 @@
         a_mediator.AddControlTextBox(tb_name, "Name")
     End Sub
     Private Sub tb_name_Leave(sender As Object, e As EventArgs) Handles tb_name.Leave
-        a_mediator.ValidateControl("tb_name")
+        a_mediator.ValidateControl("tb_name", tb_name.Text)
     End Sub
 
     Private Sub btn_record_Click(sender As Object, e As EventArgs) Handles btn_record.Click
-        a_mediator.ValidateControl("tb_name")
+        a_mediator.ValidateControl("tb_name", tb_name.Text)
     End Sub
 End Class

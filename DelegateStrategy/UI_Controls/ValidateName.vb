@@ -10,7 +10,7 @@
         End If
         Return "cela n'a pas fonctionnee"
     End Function
-    Public Function getValidator() As IDeepTools.DeepToolsValidate(Of String, Boolean)
-        Return New IDeepTools.DeepToolsValidate(Of String, Boolean)(AddressOf Me.ExecValidation)
+    Public Function getValidator() As IDeepTools.DeepToolsValidate(Of String, String)
+        Return New IDeepTools.DeepToolsValidate(Of String, String)(AddressOf Me.ExecValidation)
     End Function
 End Class
