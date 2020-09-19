@@ -86,6 +86,7 @@
     <Compile Include="IHelper.vb" />
     <Compile Include="IMediator.vb" />
     <Compile Include="IValidateName.vb" />
+    <Compile Include="Mediator.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
