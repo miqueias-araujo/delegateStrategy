@@ -5,7 +5,7 @@
         DictHelpers_KeyStringNameProperty_ValueIHelper = New Dictionary(Of String, IHelper)
         DictPropertiesControlNames_KeyStringNameProperty_ValueListOfStringControlName = New Dictionary(Of String, List(Of String))
         DictControlNamePropertyName_KeyStringControlName_ValueStringPropertyName = New Dictionary(Of String, String)
-        DictHelpers_KeyStringNameProperty_ValueIHelper.Add("Name", New ValidateName)
+        DictHelpers_KeyStringNameProperty_ValueIHelper.Add("Name", New ValidateName()
     End Sub
 
     Private Property DictProperties_KeyStringControlName_ValueDict_KeyStringControlPropertyName_ValueStringPropertyValue As Dictionary(Of String, Dictionary(Of String, String)) Implements IMediator.DictProperties_KeyStringControlName_ValueDict_KeyStringControlPropertyName_ValueStringPropertyValue
