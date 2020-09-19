@@ -7,13 +7,17 @@
 
         ' Add any initialization after the InitializeComponent() call.
         a_mediator = New Mediator
-        a_mediator.AddControlTextBox(tb_name, "Name")
+        'a_mediator.AddControlTextBox(tb_name, "Name")
+        a_mediator.AddControlTextBox_v2(tb_name, "Name")
+
     End Sub
     Private Sub tb_name_Leave(sender As Object, e As EventArgs) Handles tb_name.Leave
-        a_mediator.ValidateControl("tb_name", tb_name.Text)
+        a_mediator.ValidateControl_v2("tb_name", tb_name.Text)
+
+
     End Sub
 
     Private Sub btn_record_Click(sender As Object, e As EventArgs) Handles btn_record.Click
-        a_mediator.ValidateControl("tb_name", tb_name.Text)
+        a_mediator.ValidateControl_v2("tb_name", tb_name.Text)
     End Sub
 End Class
