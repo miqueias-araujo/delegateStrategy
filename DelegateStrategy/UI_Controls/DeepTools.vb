@@ -1,26 +1,26 @@
 ﻿Public Class DeepTools
     Implements IDeepTools
 
+    Public Delegate Function DeepToolsValidate(Of In T, Out TRebsult)(arg As T) As TRebsult
     Public Property Text As String Implements IDeepTools.Text
     Sub New(p_text)
         Me.Text = p_text
     End Sub
 
-    Public Function IsNotEmptyValue(p_text As String) As Boolean Implements IDeepTools.IsNotEmptyValue
-        Me.Text = p_text
-        Return Not String.IsNullOrEmpty(p_text)
+    Public Function IsNotEmptyValue() As Boolean Implements IDeepTools.IsNotEmptyValue
+        Return Not String.IsNullOrEmpty(Me.Text)
     End Function
 
-    Public Function HasOnlyNumbers(p_text As String) As Boolean Implements IDeepTools.HasOnlyNumbers
-        Me.Text = p_text
+    Public Function HasOnlyNumbers() As Boolean Implements IDeepTools.HasOnlyNumbers
+
         Dim a_number As Integer
-        Return Integer.TryParse(p_text, a_number)
+        Return Integer.TryParse(Me.Text, a_number)
     End Function
 
-    Public Function Has10Characters(p_text As String) As Boolean Implements IDeepTools.Has10Characters
-        Me.Text = p_text
-        If IsNotEmptyValue(p_text) Then
-            Return p_text.Length = 10
+    Public Function Has10Characters() As Boolean Implements IDeepTools.Has10Characters
+
+        If IsNotEmptyValue() Then
+            Return Me.Text.Length = 10
         End If
         Return False
     End Function
