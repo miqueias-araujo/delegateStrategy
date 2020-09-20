@@ -16,7 +16,7 @@ Namespace HelperFacade
             Return Validator.Invoke(p_systemComponent)
         End Function
 
-        Friend Function GetHelperForNameSystemProperty() As IHelper
+        Friend Function GetHelperForNameSystemProperty() As IHelper Implements IHelper.GetHelperForNameSystemProperty
             Return New Helper(New GenericValidateText(Of ConfigSystemComponent_Name, ValidateText_DeepTools)().getValidator)
         End Function
     End Class
