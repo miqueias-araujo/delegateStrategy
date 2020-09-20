@@ -12,7 +12,7 @@ Public Interface IMediator
     Sub UpdateControlTextBox(p_textBox As TextBox, p_systemPropertyName As String)
     Sub AddControlTextBox_v2(p_controlTextBox As TextBox, p_propertyName As String)
     Sub ValidateControl_v2(p_controlName As String, p_value As String)
-    Property DictComponent_KeyStringComponentName As Dictionary(Of String, SystemComponent)
+    Property DictSystemComponent_KeyStringComponentName As Dictionary(Of String, SystemComponent)
     Property DictComponentBean_KeyStringComponentName As Dictionary(Of String, ComponentBean)
     'Property DictHelper_KeyStringComponentName As Dictionary(Of String, IHelper)
 
@@ -36,7 +36,7 @@ Namespace StructuresSystem
         Property SystemPropertyName As String
     End Class
     Public Class ResponseValidation
-        Property ComponentMessage As New Exception
+        Property ComponentMessage As Exception
         Property Component As SystemComponent
     End Class
     Public Class SystemProperty
