@@ -73,7 +73,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DeepTools.vb" />
+    <Compile Include="BaseStructure\IComponentBean.vb" />
+    <Compile Include="BaseStructure\ComponentBean.vb" />
+    <Compile Include="BaseStructure\IResponseValidation.vb" />
+    <Compile Include="BaseStructure\ResponseValidation.vb" />
+    <Compile Include="BaseStructure\ISystemComponent.vb" />
+    <Compile Include="BaseStructure\SystemComponent.vb" />
+    <Compile Include="ValidateText_DeepToolsTemplate\ValidateText_DeepTools.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -81,12 +87,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Helper.vb" />
-    <Compile Include="IDeepTools.vb" />
-    <Compile Include="IHelper.vb" />
-    <Compile Include="IMediator.vb" />
-    <Compile Include="IValidateName.vb" />
-    <Compile Include="Mediator.vb" />
+    <Compile Include="HelperFacade\Helper.vb" />
+    <Compile Include="ValidateText_DeepToolsTemplate\IValidateText_DeepTools.vb" />
+    <Compile Include="HelperFacade\IHelper.vb" />
+    <Compile Include="WinFormMediator\IMediator.vb" />
+    <Compile Include="ValidateName_Strategy\IValidateName.vb" />
+    <Compile Include="WinFormMediator\Mediator.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -102,7 +108,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ValidateName.vb" />
+    <Compile Include="ValidateName_Strategy\ValidateName.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -127,5 +133,6 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
