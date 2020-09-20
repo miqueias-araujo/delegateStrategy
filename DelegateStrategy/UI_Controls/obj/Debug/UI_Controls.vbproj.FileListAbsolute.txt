@@ -2,7 +2,6 @@ C:\Users\Familia\Source\Repos\delegateStrategy\DelegateStrategy\UI_Controls\bin\
 C:\Users\Familia\Source\Repos\delegateStrategy\DelegateStrategy\UI_Controls\bin\Debug\UI_Controls.exe
 C:\Users\Familia\Source\Repos\delegateStrategy\DelegateStrategy\UI_Controls\bin\Debug\UI_Controls.pdb
 C:\Users\Familia\Source\Repos\delegateStrategy\DelegateStrategy\UI_Controls\bin\Debug\UI_Controls.xml
-C:\Users\Familia\Source\Repos\delegateStrategy\DelegateStrategy\UI_Controls\obj\Debug\UI_Controls.vbprojAssemblyReference.cache
 C:\Users\Familia\Source\Repos\delegateStrategy\DelegateStrategy\UI_Controls\obj\Debug\UI_Controls.frm_Principal.resources
 C:\Users\Familia\Source\Repos\delegateStrategy\DelegateStrategy\UI_Controls\obj\Debug\UI_Controls.Resources.resources
 C:\Users\Familia\Source\Repos\delegateStrategy\DelegateStrategy\UI_Controls\obj\Debug\UI_Controls.vbproj.GenerateResource.cache

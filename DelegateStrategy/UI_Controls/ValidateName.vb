@@ -7,28 +7,13 @@ Public Class ValidateName
 
     Private Property ResponseValidation As ResponseValidation Implements IValidateName.ResponseValidation
 
-    Private Function ExecValidation(p_texte As String) As String Implements IValidateName.ExecValidation
-        Dim deep As IDeepTools = New DeepTools(p_texte)
-        Dim reponse = deep.IsNotEmptyValue()
-        reponse = reponse AndAlso deep.HasOnlyNumbers()
-        If reponse Then
-            Return "tout et bon"
-        End If
-        Return "cela n'a pas fonctionnee"
-    End Function
-    Public Function getValidator() As IDeepTools.DeepToolsValidate(Of String, String)
-        Return New IDeepTools.DeepToolsValidate(Of String, String)(AddressOf Me.ExecValidation)
+    Public Function getValidator() As IDeepTools.Validator(Of StructuresSystem.SystemComponent, StructuresSystem.ResponseValidation)
+        Return New IDeepTools.Validator(Of StructuresSystem.SystemComponent, StructuresSystem.ResponseValidation)(AddressOf ExecValidation)
     End Function
 
-    Public Function getValidator_v2() As IDeepTools.Validator_v2(Of StructuresSystem.SystemComponent, StructuresSystem.ResponseValidation)
-        Return New IDeepTools.Validator_v2(Of StructuresSystem.SystemComponent, StructuresSystem.ResponseValidation)(AddressOf ExecValidation_v2)
-    End Function
-
-    Public Function ExecValidation_v2(p_systemComponent As SystemComponent) As ResponseValidation Implements IValidateName.ExecValidation_v2
+    Public Function ExecValidation(p_systemComponent As SystemComponent) As ResponseValidation Implements IValidateName.ExecValidation
         Me.SystemComponent = p_systemComponent
         Me.ResponseValidation = New ResponseValidation
-
-        '-----------------------------------
 
         Dim deep As IDeepTools = New DeepTools(p_systemComponent.ComponentValue)
         Dim reponse = deep.IsNotEmptyValue()
@@ -42,7 +27,6 @@ Public Class ValidateName
         ResponseValidation.Component = p_systemComponent
         Dim a_exception As New Exception(String.Format("This is a not good value for the property: {0}", p_systemComponent.SystemPropertyName))
         ResponseValidation.ComponentMessage = a_exception
-        '-----------------------------------
 
         Return ResponseValidation
     End Function
