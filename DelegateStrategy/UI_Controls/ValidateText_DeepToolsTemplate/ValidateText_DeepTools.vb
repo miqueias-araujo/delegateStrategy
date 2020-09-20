@@ -6,6 +6,8 @@
         Sub New(p_text As String)
             Me.Text = p_text
         End Sub
+        Sub New()
+        End Sub
 
         Public Function IsNotEmptyValue() As Boolean Implements IValidateText_DeepTools.IsNotEmptyValue
             Return Not String.IsNullOrEmpty(Me.Text)

@@ -73,8 +73,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseStructure\ConfigSystemComponent_Name.vb" />
     <Compile Include="BaseStructure\IComponentBean.vb" />
     <Compile Include="BaseStructure\ComponentBean.vb" />
+    <Compile Include="BaseStructure\IConfigSystemComponent_Name.vb" />
     <Compile Include="BaseStructure\IResponseValidation.vb" />
     <Compile Include="BaseStructure\ResponseValidation.vb" />
     <Compile Include="BaseStructure\ISystemComponent.vb" />
@@ -108,7 +110,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ValidateName_Strategy\ValidateName.vb" />
+    <Compile Include="ValidateName_Strategy\GenericValidateText.vb" />
+    <Compile Include="WinFormMediator\IMediatorWinForm_TextBox.vb" />
+    <Compile Include="WinFormMediator\MediatorWinForm_TextBox.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
