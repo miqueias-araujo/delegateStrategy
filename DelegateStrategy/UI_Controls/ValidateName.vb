@@ -4,11 +4,10 @@ Public Class ValidateName
     Implements IValidateName
 
     Private Property SystemComponent As SystemComponent Implements IValidateName.SystemComponent
-
     Private Property ResponseValidation As ResponseValidation Implements IValidateName.ResponseValidation
 
-    Public Function getValidator() As IDeepTools.Validator(Of StructuresSystem.SystemComponent, StructuresSystem.ResponseValidation)
-        Return New IDeepTools.Validator(Of StructuresSystem.SystemComponent, StructuresSystem.ResponseValidation)(AddressOf ExecValidation)
+    Public Function getValidator() As IDeepTools.Validator(Of SystemComponent, ResponseValidation) Implements IValidateName.getValidator
+        Return New IDeepTools.Validator(Of SystemComponent, ResponseValidation)(AddressOf ExecValidation)
     End Function
 
     Public Function ExecValidation(p_systemComponent As SystemComponent) As ResponseValidation Implements IValidateName.ExecValidation
@@ -31,13 +30,13 @@ Public Class ValidateName
         Return ResponseValidation
     End Function
 
-    Sub ConvertToValideControlFormat(ByRef p_component As SystemComponent)
+    Sub ConvertToValideControlFormat(ByRef p_component As SystemComponent) Implements IValidateName.ConvertToValideControlFormat
         p_component.ComponentBackColorName = Color.White.Name
         p_component.ComponentFontColorName = Color.Black.Name
         p_component.ComponentFontStyleCode = FontStyle.Regular
     End Sub
 
-    Sub ConvertToNotValideControlFormat(ByRef p_component As SystemComponent)
+    Sub ConvertToNotValideControlFormat(ByRef p_component As SystemComponent) Implements IValidateName.ConvertToNotValideControlFormat
         p_component.ComponentBackColorName = Color.Salmon.Name
         p_component.ComponentFontColorName = Color.Green.Name
         p_component.ComponentFontStyleCode = FontStyle.Bold

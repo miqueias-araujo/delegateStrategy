@@ -2,10 +2,6 @@
     Implements IDeepTools
 
     Public Property Text As String Implements IDeepTools.Text
-    Sub New(p_systemComponent As StructuresSystem.SystemComponent)
-        Me.Text = p_systemComponent.ComponentValue
-    End Sub
-
     Sub New(p_text As String)
         Me.Text = p_text
     End Sub

@@ -2,18 +2,16 @@
 
 Public Interface IMediator
     Property Name As String
-    Sub SetControlName(p_textBox As TextBox)
-    Property DictProperties_KeyStringControlName_ValueDict_KeyStringControlPropertyName_ValueStringPropertyValue As Dictionary(Of String, Dictionary(Of String, String))
     Property DictHelpers_KeyStringNameProperty_ValueIHelper As Dictionary(Of String, IHelper)
-    Property DictPropertiesControlNames_KeyStringNameProperty_ValueListOfStringControlName As Dictionary(Of String, List(Of String))
-    Property DictControlNamePropertyName_KeyStringControlName_ValueStringPropertyName As Dictionary(Of String, String)
-    Sub UpdateControlTextBox(p_textBox As TextBox, p_systemPropertyName As String)
     Sub AddControlTextBox(p_controlTextBox As TextBox, p_propertyName As String)
     Sub ValidateControl(p_controlName As String, p_value As String)
     Property DictSystemComponent_KeyStringComponentName As Dictionary(Of String, SystemComponent)
     Property DictComponentBean_KeyStringComponentName As Dictionary(Of String, ComponentBean)
-
-
+    Sub AddComponentBean(p_controlTextBox As TextBox, p_systemPropertyName As String)
+    Function CastTextBoxToSystemComponent(p_controlTextBox As TextBox, p_systemPropertyName As String) As SystemComponent
+    Sub AddSystemComponent(p_controlTextBox As TextBox, p_systemPropertyName As String)
+    Sub UpdateSystemComponent(p_controlName As String)
+    Sub UpdateComponentBean(p_component As SystemComponent)
 End Interface
 Namespace StructuresSystem
 

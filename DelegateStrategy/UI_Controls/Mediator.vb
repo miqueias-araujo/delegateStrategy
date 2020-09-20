@@ -3,24 +3,16 @@
 Public Class Mediator
     Implements IMediator
     Sub New()
-        DictProperties_KeyStringControlName_ValueDict_KeyStringControlPropertyName_ValueStringPropertyValue = New Dictionary(Of String, Dictionary(Of String, String))
-        DictPropertiesControlNames_KeyStringNameProperty_ValueListOfStringControlName = New Dictionary(Of String, List(Of String))
-        DictControlNamePropertyName_KeyStringControlName_ValueStringPropertyName = New Dictionary(Of String, String)
-
         DictComponentBean_KeyStringComponentName = New Dictionary(Of String, ComponentBean)
         DictSystemComponent_KeyStringComponentName = New Dictionary(Of String, SystemComponent)
-
         DictHelpers_KeyStringNameProperty_ValueIHelper = New Dictionary(Of String, IHelper)
         DictHelpers_KeyStringNameProperty_ValueIHelper.Add("Name", New Helper(New ValidateName().getValidator))
     End Sub
 
     Public Property DictSystemComponent_KeyStringComponentName As Dictionary(Of String, SystemComponent) Implements IMediator.DictSystemComponent_KeyStringComponentName
     Public Property DictComponentBean_KeyStringComponentName As Dictionary(Of String, ComponentBean) Implements IMediator.DictComponentBean_KeyStringComponentName
-    Public Property Name As String Implements IMediator.Name
-    Private Property DictProperties_KeyStringControlName_ValueDict_KeyStringControlPropertyName_ValueStringPropertyValue As Dictionary(Of String, Dictionary(Of String, String)) Implements IMediator.DictProperties_KeyStringControlName_ValueDict_KeyStringControlPropertyName_ValueStringPropertyValue
+    Private Property Name As String Implements IMediator.Name
     Private Property DictHelpers_KeyStringNameProperty_ValueIHelper As Dictionary(Of String, IHelper) Implements IMediator.DictHelpers_KeyStringNameProperty_ValueIHelper
-    Private Property DictPropertiesControlNames_KeyStringNameProperty_ValueListOfStringControlName As Dictionary(Of String, List(Of String)) Implements IMediator.DictPropertiesControlNames_KeyStringNameProperty_ValueListOfStringControlName
-    Private Property DictControlNamePropertyName_KeyStringControlName_ValueStringPropertyName As Dictionary(Of String, String) Implements IMediator.DictControlNamePropertyName_KeyStringControlName_ValueStringPropertyName
 
     Public Sub ValidateControl(p_controlName As String, p_value As String) Implements IMediator.ValidateControl
         UpdateSystemComponent(p_controlName)
@@ -34,7 +26,7 @@ Public Class Mediator
 
     End Sub
 
-    Private Sub UpdateComponentBean(p_component As SystemComponent)
+    Private Sub UpdateComponentBean(p_component As SystemComponent) Implements IMediator.UpdateComponentBean
         Dim a_controlName As String = p_component.ComponentName
         Dim a_componentBean As ComponentBean = DictComponentBean_KeyStringComponentName(p_component.ComponentName)
         Dim a_newTextBoxControl As New TextBox
@@ -50,7 +42,7 @@ Public Class Mediator
         End If
     End Sub
 
-    Private Sub UpdateSystemComponent(p_controlName As String)
+    Private Sub UpdateSystemComponent(p_controlName As String) Implements IMediator.UpdateSystemComponent
         Dim a_componentBean As ComponentBean = DictComponentBean_KeyStringComponentName(p_controlName)
         Dim a_textBoxToGetType As New TextBox
         If Not a_componentBean.ComponentTypeFullName.Equals(a_textBoxToGetType.GetType.FullName) Then
@@ -60,20 +52,12 @@ Public Class Mediator
         DictSystemComponent_KeyStringComponentName(p_controlName) = a_newSystemComponent
     End Sub
 
-    Public Sub UpdateControlTextBox(p_textBox As TextBox, p_systemPropertyName As String) Implements IMediator.UpdateControlTextBox
-        Throw New NotImplementedException()
-    End Sub
-
-    Public Sub SetControlName(p_textBox As TextBox) Implements IMediator.SetControlName
-        'AddControlTextBox(p_textBox, "Name")
-        AddControlTextBox(p_textBox, "Name")
-    End Sub
     Public Sub AddControlTextBox(p_controlTextBox As TextBox, p_propertyName As String) Implements IMediator.AddControlTextBox
         AddComponentBean(p_controlTextBox, p_propertyName)
         AddSystemComponent(p_controlTextBox, p_propertyName)
     End Sub
 
-    Private Sub AddSystemComponent(p_controlTextBox As TextBox, p_systemPropertyName As String)
+    Private Sub AddSystemComponent(p_controlTextBox As TextBox, p_systemPropertyName As String) Implements IMediator.AddSystemComponent
         If IsNothing(p_controlTextBox) Then
             Throw New Exception("This Control is Nothing")
         End If
@@ -87,7 +71,8 @@ Public Class Mediator
         End If
     End Sub
 
-    Private Function CastTextBoxToSystemComponent(p_controlTextBox As TextBox, p_systemPropertyName As String) As SystemComponent
+    Private Function CastTextBoxToSystemComponent(p_controlTextBox As TextBox, p_systemPropertyName As String) As SystemComponent Implements IMediator.CastTextBoxToSystemComponent
+
         Dim a_systemComponent As New SystemComponent With {
             .SystemPropertyName = p_systemPropertyName,
             .ComponentBackColorName = p_controlTextBox.BackColor.Name,
@@ -100,7 +85,7 @@ Public Class Mediator
         Return a_systemComponent
     End Function
 
-    Private Sub AddComponentBean(p_controlTextBox As TextBox, p_systemPropertyName As String) ' todo: implement from interface
+    Private Sub AddComponentBean(p_controlTextBox As TextBox, p_systemPropertyName As String) Implements IMediator.AddComponentBean
         If IsNothing(p_controlTextBox) Then
             Throw New Exception("This Control is Nothing")
         End If
