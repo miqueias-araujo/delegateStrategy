@@ -9,7 +9,7 @@ Namespace WinFormMediator
         Property DictSystemComponent_KeyStringComponentName As Dictionary(Of String, ISystemComponent)
         Property DictComponentBean_KeyStringComponentName As Dictionary(Of String, IComponentBean)
         Property MediatorWinForm_TextBox As IMediatorWinForm_TextBox
-
+        Property MediatorWinForm_Record As IMediatorRecordWinForm
     End Interface
 End Namespace
 

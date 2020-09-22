@@ -81,6 +81,16 @@
     <Compile Include="BaseStructure\ResponseValidation.vb" />
     <Compile Include="BaseStructure\ISystemComponent.vb" />
     <Compile Include="BaseStructure\SystemComponent.vb" />
+    <Compile Include="RecorderSystemPropertieCollection_Strategy\GenericRecorderWinForm.vb" />
+    <Compile Include="HelperFacade\ISystemPropertieCollectionToRecord.vb" />
+    <Compile Include="IRecorder_DeepToolsTemplate\IRecorder_DeepTools.vb" />
+    <Compile Include="IRecorder_DeepToolsTemplate\Recorder_DeepTools.vb" />
+    <Compile Include="MainView.Designer.vb">
+      <DependentUpon>MainView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ValidateText_DeepToolsTemplate\ValidateText_DeepTools.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -94,6 +104,7 @@
     <Compile Include="HelperFacade\IHelper.vb" />
     <Compile Include="WinFormMediator\IMediator.vb" />
     <Compile Include="ValidateName_Strategy\IValidateName.vb" />
+    <Compile Include="WinFormMediator\IMediatorRecordWinForm.vb" />
     <Compile Include="WinFormMediator\Mediator.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -112,11 +123,15 @@
     </Compile>
     <Compile Include="ValidateName_Strategy\GenericValidateText.vb" />
     <Compile Include="WinFormMediator\IMediatorWinForm_TextBox.vb" />
+    <Compile Include="WinFormMediator\MediatorWinForm_Record.vb" />
     <Compile Include="WinFormMediator\MediatorWinForm_TextBox.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainView.resx">
+      <DependentUpon>MainView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
