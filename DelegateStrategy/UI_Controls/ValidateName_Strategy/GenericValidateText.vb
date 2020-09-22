@@ -1,23 +1,23 @@
 ﻿Imports UI_Controls.BaseStructure
 Imports UI_Controls.ValidateText_DeepToolsTemplate
 Namespace ValidateName_Strategy
-    Public Class GenericValidateText(Of ConfigType As {Class, New}, DeepValidatorType As {Class, New})
-        Implements IValidateName
+    Public Class GenericValidateText(Of C_ConfigType As {Class, New}, V_DeepValidatorType As {Class, New})
+        Implements IGenericValidateText
 
-        Private Property ConfigSystemComponent_Name As IConfigSystemComponent_Name
+        Private Property ConfigSystemComponent_Name As IConfigSystemComponent_Name Implements IGenericValidateText.ConfigSystemComponent_Name
 
         Public Sub New()
-            ConfigSystemComponent_Name = New ConfigType()
+            ConfigSystemComponent_Name = New C_ConfigType()
         End Sub
 
-        Public Function getValidator() As IValidateText_DeepTools.Validator(Of ISystemComponent, IResponseValidation) Implements IValidateName.getValidator
+        Public Function getValidator() As IValidateText_DeepTools.Validator(Of ISystemComponent, IResponseValidation) Implements IGenericValidateText.getValidator
             Return New IValidateText_DeepTools.Validator(Of ISystemComponent, IResponseValidation)(AddressOf ExecValidation)
         End Function
 
-        Public Function ExecValidation(p_systemComponent As ISystemComponent) As IResponseValidation Implements IValidateName.ExecValidation
+        Public Function ExecValidation(p_systemComponent As ISystemComponent) As IResponseValidation Implements IGenericValidateText.ExecValidation
             Dim a_responseValidation = New ResponseValidation
 
-            Dim deep As IValidateText_DeepTools = New DeepValidatorType()
+            Dim deep As IValidateText_DeepTools = New V_DeepValidatorType()
             deep.Text = p_systemComponent.ComponentValue
 
             Dim reponse As Boolean = ConfigSystemComponent_Name.ReponseValidator(deep)
@@ -34,13 +34,13 @@ Namespace ValidateName_Strategy
             Return a_responseValidation
         End Function
 
-        Sub ConvertToValideControlFormat(ByRef p_component As ISystemComponent) Implements IValidateName.ConvertToValideControlFormat
+        Sub ConvertToValideControlFormat(ByRef p_component As ISystemComponent) Implements IGenericValidateText.ConvertToValideControlFormat
             p_component.ComponentBackColorName = ConfigSystemComponent_Name.Valide_ComponentBackColorName
             p_component.ComponentFontColorName = ConfigSystemComponent_Name.Valide_ComponentFontColorName
             p_component.ComponentFontStyleCode = ConfigSystemComponent_Name.Valide_ComponentFontStyleCode
         End Sub
 
-        Sub ConvertToNotValideControlFormat(ByRef p_component As ISystemComponent) Implements IValidateName.ConvertToNotValideControlFormat
+        Sub ConvertToNotValideControlFormat(ByRef p_component As ISystemComponent) Implements IGenericValidateText.ConvertToNotValideControlFormat
             p_component.ComponentBackColorName = ConfigSystemComponent_Name.NotValide_ComponentBackColorName
             p_component.ComponentFontColorName = ConfigSystemComponent_Name.NotValide_ComponentFontColorName
             p_component.ComponentFontStyleCode = ConfigSystemComponent_Name.NotValide_ComponentFontStyleCode

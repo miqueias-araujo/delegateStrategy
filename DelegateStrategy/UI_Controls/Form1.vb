@@ -18,8 +18,8 @@ Public Class frm_Principal
     End Sub
 
     Private Sub btn_record_Click(sender As Object, e As EventArgs) Handles btn_record.Click
-        a_mediator.MediatorWinForm_TextBox.ValidateControl("tb_name", tb_name.Text)
-        a_mediator.MediatorWinForm_Record.RecordAllControls()
+        'a_mediator.MediatorWinForm_TextBox.ValidateControl("tb_name", tb_name.Text)
+        a_mediator.MediatorWinForm_Recorder.PersistAllForm()
     End Sub
     End Class
 

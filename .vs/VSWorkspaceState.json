@@ -1,9 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\DelegateStrategy",
-    "\\DelegateStrategy\\UI_Controls"
+    ""
   ],
-  "SelectedNode": "\\DelegateStrategy\\UI_Controls\\MainView.vb",
-  "PreviewInSolutionExplorer": true
+  "PreviewInSolutionExplorer": false
 }

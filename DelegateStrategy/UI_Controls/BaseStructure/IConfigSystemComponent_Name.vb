@@ -1,7 +1,7 @@
 ﻿Imports UI_Controls.ValidateText_DeepToolsTemplate
 
 Namespace BaseStructure
-    Friend Interface IConfigSystemComponent_Name
+    Public Interface IConfigSystemComponent_Name
         ReadOnly Property Valide_ComponentFontColorName As String
         ReadOnly Property Valide_ComponentBackColorName As String
         ReadOnly Property Valide_ComponentFontStyleCode As FontStyle
