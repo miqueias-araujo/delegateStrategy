@@ -1,4 +1,5 @@
 ﻿Imports System.Text.Json
+Imports UI_Controls.HelperFacade
 
 Namespace WinFormMediator
     Friend Class MediatorWinForm_Recorder
@@ -8,7 +9,13 @@ Namespace WinFormMediator
 
         Public Sub New(mediator As IMediator)
             Me.mediator = mediator
+            Dim helperForPersistInJson As IHelper = New Helper().GetHelperForPersistInJson
+
+
+
         End Sub
+
+
 
         Public Sub PersistAllForm() Implements IMediatorWinForm_Recorder.PersistAllForm
             If Not IsNothing(mediator.DictSystemComponent_KeyStringComponentName) AndAlso mediator.DictSystemComponent_KeyStringComponentName.Count > 0 Then
@@ -22,6 +29,10 @@ Namespace WinFormMediator
                 Dim info3 = propCollection.PropertiesCollection_TypeFullName
                 Dim infoComplete = propCollection
                 Dim obj = infoComplete.GetThisObject
+
+                Dim a_writerMediator = New Helper().GetHelperForPersistInJson
+                a_writerMediator.Write(propCollection)
+
 
 
             End If

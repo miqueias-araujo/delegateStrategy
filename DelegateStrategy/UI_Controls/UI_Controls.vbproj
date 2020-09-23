@@ -89,9 +89,11 @@
     <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\IPropertiesCollection.vb" />
     <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\ISystemProperty.vb" />
     <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\ITFS_Type_Testing.vb" />
-    <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\PersistInJson_DeepToolsTemplate\IPersistInJson.vb" />
+    <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\PersistInJson_DeepToolsTemplate\IPersistInSource.vb" />
+    <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\PersistSystemObject_Strategy\GenericPersistSystemObject.vb" />
+    <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\PersistSystemObject_Strategy\IGenericPersistSystemObject.vb" />
     <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\PropertiesCollection.vb" />
-    <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\ReadFromJson_DeepToolsTemplate\IReadFromJson.vb" />
+    <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\ReadFromJson_DeepToolsTemplate\IReadFromSource.vb" />
     <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\SystemProperty.vb" />
     <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\TFS_Type_Testing.vb" />
     <Compile Include="BaseStructure\ResponseValidation.vb" />
@@ -157,8 +159,6 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BaseStructure\NewModulo_RecorderPropertiesCollection\PersistSystemObject_Strategy\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

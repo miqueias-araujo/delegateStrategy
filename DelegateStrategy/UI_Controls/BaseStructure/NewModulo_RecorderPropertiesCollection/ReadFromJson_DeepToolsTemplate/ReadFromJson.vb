@@ -1,6 +1,6 @@
 ﻿Namespace ReadFromJson_DeepToolsTemplate
     Public Class ReadFromJson
-        Implements IReadFromJson
+        Implements IReadFromSource
 
     End Class
 End Namespace
