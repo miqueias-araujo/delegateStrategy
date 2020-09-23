@@ -68,4 +68,19 @@ Public Class PropertiesCollection(Of I_SystemObjectInterface As {Class, New})
         End If
         Return JsonSerializer.Serialize(Me)
     End Function
+    Public Function GetThisObject() As I_SystemObjectInterface
+        'Dim a_obj As I_SystemObjectInterface = New I_SystemObjectInterface
+        Dim a_objReponse As I_SystemObjectInterface = New I_SystemObjectInterface
+        For Each a_objProp As PropertyInfo In a_objReponse.GetType.GetProperties
+            Dim a_propName = a_objProp.Name
+            Dim a_propTypeFullName = a_objProp.Name.GetType
+
+            If a_propTypeFullName.FullName.Equals(Me(a_propName).KV_KeyObjectTypeFullName_ValueJsonObject.Key) Then
+                a_objProp.SetValue(a_objReponse, Me(a_propName).KV_KeyObjectTypeFullName_ValueJsonObject.Value)
+            End If
+
+        Next
+
+        Return a_objReponse
+    End Function
 End Class

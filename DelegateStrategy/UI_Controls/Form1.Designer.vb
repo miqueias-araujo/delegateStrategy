@@ -33,6 +33,7 @@ Partial Class frm_Principal
         Me.tb_name.Name = "tb_name"
         Me.tb_name.Size = New System.Drawing.Size(100, 20)
         Me.tb_name.TabIndex = 0
+        Me.tb_name.Text = "vvvvvvvvvv"
         '
         'Label1
         '

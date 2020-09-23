@@ -78,19 +78,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseStructure\ConfigSystemComponent_Name.vb" />
+    <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\ConfigSystem_IO_Json.vb" />
     <Compile Include="BaseStructure\IComponentBean.vb" />
     <Compile Include="BaseStructure\ComponentBean.vb" />
     <Compile Include="BaseStructure\IConfigSystemComponent_Name.vb" />
     <Compile Include="BaseStructure\IResponseValidation.vb" />
+    <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\FileAndFolders_DeepToolsTemplate\FileAndFolders.vb" />
+    <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\FileAndFolders_DeepToolsTemplate\IFileAndFolders.vb" />
+    <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\IConfigSystem_IO_Json.vb" />
     <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\IPropertiesCollection.vb" />
     <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\ISystemProperty.vb" />
     <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\ITFS_Type_Testing.vb" />
+    <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\PersistInJson_DeepToolsTemplate\IPersistInJson.vb" />
     <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\PropertiesCollection.vb" />
+    <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\ReadFromJson_DeepToolsTemplate\IReadFromJson.vb" />
     <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\SystemProperty.vb" />
     <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\TFS_Type_Testing.vb" />
     <Compile Include="BaseStructure\ResponseValidation.vb" />
     <Compile Include="BaseStructure\ISystemComponent.vb" />
     <Compile Include="BaseStructure\SystemComponent.vb" />
+    <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\PersistInJson_DeepToolsTemplate\PersistInJson.vb" />
+    <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\ReadFromJson_DeepToolsTemplate\ReadFromJson.vb" />
     <Compile Include="ValidateText_DeepToolsTemplate\ValidateText_DeepTools.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -104,7 +112,7 @@
     <Compile Include="HelperFacade\IHelper.vb" />
     <Compile Include="WinFormMediator\IMediator.vb" />
     <Compile Include="ValidateName_Strategy\IGenericValidateText.vb" />
-    <Compile Include="WinFormMediator\IMediatorWinForm_Recorder.vb" />
+    <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\IMediatorWinForm_Recorder.vb" />
     <Compile Include="WinFormMediator\Mediator.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -123,7 +131,7 @@
     </Compile>
     <Compile Include="ValidateName_Strategy\GenericValidateText.vb" />
     <Compile Include="WinFormMediator\IMediatorWinForm_TextBox.vb" />
-    <Compile Include="WinFormMediator\MediatorWinForm_Recorder.vb" />
+    <Compile Include="BaseStructure\NewModulo_RecorderPropertiesCollection\MediatorWinForm_Recorder.vb" />
     <Compile Include="WinFormMediator\MediatorWinForm_TextBox.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -150,8 +158,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="RecordName_Strategy\" />
-    <Folder Include="RecordPropertiesCollection_DeepToolsTemplate\" />
+    <Folder Include="BaseStructure\NewModulo_RecorderPropertiesCollection\PersistSystemObject_Strategy\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

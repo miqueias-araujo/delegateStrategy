@@ -1,4 +1,6 @@
-﻿Namespace WinFormMediator
+﻿Imports System.Text.Json
+
+Namespace WinFormMediator
     Friend Class MediatorWinForm_Recorder
         Implements IMediatorWinForm_Recorder
 
@@ -19,6 +21,9 @@
                 Dim info2 = propCollection.PropertiesCollection_Name
                 Dim info3 = propCollection.PropertiesCollection_TypeFullName
                 Dim infoComplete = propCollection
+                Dim obj = infoComplete.GetThisObject
+
+
             End If
 
         End Sub

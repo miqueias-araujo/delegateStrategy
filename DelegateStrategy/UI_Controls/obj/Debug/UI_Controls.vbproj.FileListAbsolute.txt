@@ -31,3 +31,4 @@ C:\Users\Familia\Source\Repos\miqueias-araujo\delegateStrategyTake2\DelegateStra
 C:\Users\Familia\Source\Repos\miqueias-araujo\delegateStrategyTake2\DelegateStrategy\UI_Controls\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Familia\Source\Repos\miqueias-araujo\delegateStrategyTake2\DelegateStrategy\UI_Controls\obj\Debug\UI_Controls.vbproj.CopyComplete
 C:\Users\Familia\Source\Repos\miqueias-araujo\delegateStrategyTake2\DelegateStrategy\UI_Controls\bin\Debug\System.Buffers.dll
+C:\Users\Familia\Source\Repos\miqueias-araujo\delegateStrategyTake2\DelegateStrategy\UI_Controls\obj\Debug\UI_Controls.vbprojAssemblyReference.cache
