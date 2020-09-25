@@ -12,4 +12,3 @@ Namespace HelperFacade
         Function GetHelperForPersistInJson() As IHelper
     End Interface
 End Namespace
-

@@ -32,11 +32,8 @@
 
         Public Function NewUniqueFileNameStrategy(p_systemObject As IPropertiesCollection) As String Implements IConfigSystem_IO_Json.NewUniqueFileNameStrategy
             Dim a_guid As String = String.Empty
-            If Not IsNothing(p_systemObject.PropertiesCollection_GuidCodeIdentity) AndAlso p_systemObject.PropertiesCollection_GuidCodeIdentity.Length > 5 Then
-                a_guid = p_systemObject.PropertiesCollection_GuidCodeIdentity
-            Else
-                a_guid = System.Guid.NewGuid.ToString
-            End If
+            a_guid = p_systemObject.PropertiesCollection_GuidCodeIdentity
+
             Dim objTypeName As String = String.Empty
 
             If Not IsNothing(p_systemObject) Then

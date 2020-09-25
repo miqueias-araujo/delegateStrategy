@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="UI_Controls.GenericPersistSystemObject(Of C_ConfigSystemIO, IO_FileAndFolderTools, R_Reader, W_Writer)" BaseTypeListCollapsed="true">
+    <Position X="22.5" Y="11.5" Width="6.25" />
+    <AssociationLine Name="a_configIO" Type="UI_Controls.IConfigSystem_IO_Json" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="28.75" Y="12.771" />
+        <Point X="29.25" Y="12.771" />
+        <Point X="29.25" Y="7.125" />
+        <Point X="34.188" Y="7.125" />
+        <Point X="34.188" Y="7.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAgAACAAAAQAAEAAAEABAAAAAABAAAAAAAAAAEAA=</HashCode>
+      <FileName>BaseStructure\NewModulo_RecorderPropertiesCollection\PersistSystemObject_Strategy\GenericPersistSystemObject.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="a_configIO" />
+      <Field Name="a_fileAndFolderTools" />
+      <Field Name="a_writer" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UI_Controls.PropertiesCollection(Of I_SystemObjectInterface)" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="2.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>IAIAAAAAAAAAEAAAAAAAAABAAACAAgAAAgAAAAAAAAA=</HashCode>
+      <FileName>BaseStructure\NewModulo_RecorderPropertiesCollection\PropertiesCollection.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UI_Controls.SystemProperty" BaseTypeListCollapsed="true">
+    <Position X="18.5" Y="7.5" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAAgAAAAAAAAAAAAAAAEAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseStructure\NewModulo_RecorderPropertiesCollection\SystemProperty.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UI_Controls.TFS_Type_Testing" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseStructure\NewModulo_RecorderPropertiesCollection\TFS_Type_Testing.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UI_Controls.frm_Principal">
+    <Position X="16.25" Y="3.75" Width="3.5" />
+    <AssociationLine Name="a_mediator" Type="UI_Controls.WinFormMediator.IMediator">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="5.531" Y="-2.721" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="a_mediatorTextBox" Type="UI_Controls.WinFormMediator.IMediatorWinForm_TextBox">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.611" Y="0.141" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEKAAAAAAAACEAAACAAAAAAAAAAEAGEAAAAA=</HashCode>
+      <FileName>Form1.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="a_mediator" />
+      <Field Name="a_mediatorTextBox" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="UI_Controls.HelperFacade.Helper" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="6" Width="5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAACgAAAAAAAAAgAAAAIAIAAAgAAAAAEAAAA=</HashCode>
+      <FileName>HelperFacade\Helper.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="a_helper_GenericPersistSystemObject" />
+      <Field Name="a_helper_GenericValidateText" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UI_Controls.BaseStructure.ComponentBean" BaseTypeListCollapsed="true">
+    <Position X="26.25" Y="7.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAFAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BaseStructure\ComponentBean.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UI_Controls.BaseStructure.ConfigSystemComponent_Name" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="11.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAgCIAAAAAAAAAAAAAAAgQAAAAAAAAAAAAAQCAAAQA=</HashCode>
+      <FileName>BaseStructure\ConfigSystemComponent_Name.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UI_Controls.BaseStructure.ConfigSystem_IO_Json" BaseTypeListCollapsed="true">
+    <Position X="33.25" Y="8.5" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAKAEQAAAAQAAAA=</HashCode>
+      <FileName>BaseStructure\NewModulo_RecorderPropertiesCollection\ConfigSystem_IO_Json.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UI_Controls.BaseStructure.ResponseValidation" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="10.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>BaseStructure\ResponseValidation.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Component" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UI_Controls.BaseStructure.SystemComponent" BaseTypeListCollapsed="true">
+    <Position X="9" Y="7.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAABAAAAAAgAgAAABIAAAIAAAAAAAAAA=</HashCode>
+      <FileName>BaseStructure\SystemComponent.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UI_Controls.FileAndFolders_DeepToolsTemplate.FileAndFolders" BaseTypeListCollapsed="true">
+    <Position X="31" Y="12.25" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAACAAABAAQAAAAIAA=</HashCode>
+      <FileName>BaseStructure\NewModulo_RecorderPropertiesCollection\FileAndFolders_DeepToolsTemplate\FileAndFolders.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UI_Controls.WinFormMediator.MediatorWinForm_Recorder" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="4.75" Width="2.25" />
+    <AssociationLine Name="mediator" Type="UI_Controls.WinFormMediator.IMediator">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.352" Y="0.161" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="propCollection" Type="UI_Controls.IPropertiesCollection">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.077" Y="1.019" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACACAAAAAAAAAEAAAAAAAAAAAAAAgAAAAAAAAAAEA=</HashCode>
+      <FileName>BaseStructure\NewModulo_RecorderPropertiesCollection\MediatorWinForm_Recorder.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="objectSupapo" />
+      <Field Name="mediator" />
+      <Field Name="propCollection" />
+      <Field Name="a_writerMediator" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UI_Controls.WinFormMediator.Mediator" BaseTypeListCollapsed="true">
+    <Position X="28.5" Y="3.75" Width="1.5" />
+    <AssociationLine Name="DictHelpers_KeyStringNameProperty_ValueIHelper" Type="UI_Controls.HelperFacade.IHelper">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.411" Y="0.082" Height="0.182" Width="4" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="DictSystemComponent_KeyStringComponentName" Type="UI_Controls.BaseStructure.ISystemComponent">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.045" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="MediatorWinForm_TextBox" Type="UI_Controls.WinFormMediator.IMediatorWinForm_TextBox">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.625" Y="0.11" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEEAAAAIAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>WinFormMediator\Mediator.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MediatorWinForm_Recorder" />
+      <Property Name="MediatorWinForm_TextBox" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="DictHelpers_KeyStringNameProperty_ValueIHelper" />
+      <Property Name="DictSystemComponent_KeyStringComponentName" />
+      <Property Name="DictComponentBean_KeyStringComponentName" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UI_Controls.WinFormMediator.MediatorWinForm_TextBox" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="7.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAIAAAAgABBAABAAAAAAAAAAAAABABAAAIA=</HashCode>
+      <FileName>WinFormMediator\MediatorWinForm_TextBox.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MasterMediator" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UI_Controls.PersistInJson_DeepToolsTemplate.PersistInJson" BaseTypeListCollapsed="true">
+    <Position X="29" Y="15.5" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>BaseStructure\NewModulo_RecorderPropertiesCollection\PersistInJson_DeepToolsTemplate\PersistInJson.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Helper" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UI_Controls.ReadFromJson_DeepToolsTemplate.ReadFromJson" BaseTypeListCollapsed="true">
+    <Position X="10" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseStructure\NewModulo_RecorderPropertiesCollection\ReadFromJson_DeepToolsTemplate\ReadFromJson.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UI_Controls.ValidateName_Strategy.GenericValidateText(Of C_ConfigType, V_DeepValidatorType)" BaseTypeListCollapsed="true">
+    <Position X="12.5" Y="7.5" Width="5.5" />
+    <AssociationLine Name="ConfigSystemComponent_Name" Type="UI_Controls.BaseStructure.IConfigSystemComponent_Name">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.993" Y="0.166" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAgAAQAIAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ValidateName_Strategy\GenericValidateText.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ConfigSystemComponent_Name" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UI_Controls.ValidateText_DeepToolsTemplate.ValidateText_DeepTools" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="6" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgQAAAAAAAAAAAAAAEAAAAACAAAAAA=</HashCode>
+      <FileName>ValidateText_DeepToolsTemplate\ValidateText_DeepTools.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="UI_Controls.WinFormMediator.IMediator" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEEAAAAIAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>WinFormMediator\IMediator.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UI_Controls.WinFormMediator.IMediatorWinForm_TextBox" Collapsed="true">
+    <Position X="22.25" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAIAAAAgABBAABAAAAAAAAAAAAABABAAAIA=</HashCode>
+      <FileName>WinFormMediator\IMediatorWinForm_TextBox.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UI_Controls.BaseStructure.IConfigSystemComponent_Name" Collapsed="true">
+    <Position X="12.75" Y="10.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgCIAAAAAAAAAAAAAAAgQAAAAAAAAAAAAAQCAAAQA=</HashCode>
+      <FileName>BaseStructure\IConfigSystemComponent_Name.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UI_Controls.HelperFacade.IHelper" Collapsed="true">
+    <Position X="23" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAACgAAAAAAAAAAAAAAIAAAAAgAAAAAEAAAA=</HashCode>
+      <FileName>HelperFacade\IHelper.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UI_Controls.BaseStructure.ISystemComponent" Collapsed="true">
+    <Position X="22.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAABAAAAAAgAgAAABIAAAIAAAAAAAAAA=</HashCode>
+      <FileName>BaseStructure\ISystemComponent.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UI_Controls.WinFormMediator.IMediatorWinForm_Recorder" Collapsed="true">
+    <Position X="22.25" Y="5.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseStructure\NewModulo_RecorderPropertiesCollection\IMediatorWinForm_Recorder.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UI_Controls.ITFS_Type_Testing">
+    <Position X="19.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseStructure\NewModulo_RecorderPropertiesCollection\ITFS_Type_Testing.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UI_Controls.IGenericPersistSystemObject" Collapsed="true">
+    <Position X="22.5" Y="10.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAABAAAAAABAAAAAAAAAAEAA=</HashCode>
+      <FileName>BaseStructure\NewModulo_RecorderPropertiesCollection\PersistSystemObject_Strategy\IGenericPersistSystemObject.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UI_Controls.ValidateText_DeepToolsTemplate.IValidateText_DeepTools">
+    <Position X="0.5" Y="3.25" Width="2.5" />
+    <NestedTypes>
+      <Delegate Name="UI_Controls.ValidateText_DeepToolsTemplate.IValidateText_DeepTools.Validator(Of T, TRebsult)" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ValidateText_DeepToolsTemplate\IValidateText_DeepTools.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgQAAAAAAAAAAAAAAEAAAAACAAAAAA=</HashCode>
+      <FileName>ValidateText_DeepToolsTemplate\IValidateText_DeepTools.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UI_Controls.BaseStructure.IComponentBean" Collapsed="true">
+    <Position X="23" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAFAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BaseStructure\IComponentBean.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UI_Controls.IPropertiesCollection">
+    <Position X="12.5" Y="1.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAABAAAAAAgAAAgAAAAAAAAA=</HashCode>
+      <FileName>BaseStructure\NewModulo_RecorderPropertiesCollection\IPropertiesCollection.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UI_Controls.IConfigSystem_IO_Json" Collapsed="true">
+    <Position X="33.25" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAKAEAAAAAQAAAA=</HashCode>
+      <FileName>BaseStructure\NewModulo_RecorderPropertiesCollection\IConfigSystem_IO_Json.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UI_Controls.FileAndFolders_DeepToolsTemplate.IFileAndFolders" Collapsed="true">
+    <Position X="31" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAACAAABAAQAAAAIAA=</HashCode>
+      <FileName>BaseStructure\NewModulo_RecorderPropertiesCollection\FileAndFolders_DeepToolsTemplate\IFileAndFolders.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UI_Controls.PersistInJson_DeepToolsTemplate.IPersistInSource" Collapsed="true">
+    <Position X="29" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>BaseStructure\NewModulo_RecorderPropertiesCollection\PersistInJson_DeepToolsTemplate\IPersistInSource.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UI_Controls.BaseStructure.IResponseValidation" Collapsed="true">
+    <Position X="0.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>BaseStructure\IResponseValidation.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

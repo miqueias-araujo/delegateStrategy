@@ -4,12 +4,18 @@ Public Class PropertiesCollection(Of I_SystemObjectInterface As {Class, New})
     Inherits Dictionary(Of String, ISystemProperty)
     Implements IPropertiesCollection
 
+    Private _PropertiesCollection_GuidCodeIdentity As String = System.Guid.NewGuid.ToString()
     Public Property PropertiesCollection_Name As String Implements IPropertiesCollection.PropertiesCollection_Name
     Public ReadOnly Property PropertiesCollection_TypeFullName As String Implements IPropertiesCollection.PropertiesCollection_TypeFullName
-    Public Property PropertiesCollection_GuidCodeIdentity As String Implements IPropertiesCollection.PropertiesCollection_GuidCodeIdentity
+    Public ReadOnly Property PropertiesCollection_GuidCodeIdentity As String Implements IPropertiesCollection.PropertiesCollection_GuidCodeIdentity
+        Get
+            Return _PropertiesCollection_GuidCodeIdentity
+        End Get
+
+    End Property
 
     Public Sub New(p_object As Object)
-        Me.PropertiesCollection_GuidCodeIdentity = System.Guid.NewGuid.ToString()
+        'Me.PropertiesCollection_GuidCodeIdentity = System.Guid.NewGuid.ToString()
         Me.PropertiesCollection_TypeFullName = p_object.GetType.FullName
         'Me.PropertiesCollection_Name = ??todo: not in use, the need we it ??
 

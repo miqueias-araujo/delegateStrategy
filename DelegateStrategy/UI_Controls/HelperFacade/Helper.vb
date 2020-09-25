@@ -9,6 +9,11 @@ Imports UI_Controls.WinFormMediator
 Namespace HelperFacade
     Public Class Helper
         Implements IHelper
+
+        Private a_helper_GenericValidateText As IHelper = New Helper(New GenericValidateText(Of ConfigSystemComponent_Name, ValidateText_DeepTools)().getValidator)
+        Private a_persister__GenericPersistSystemObject As IGenericPersistSystemObject = New GenericPersistSystemObject(Of ConfigSystem_IO_Json, FileAndFolders, ReadFromJson, PersistInJson)()
+        Private a_helper_GenericPersistSystemObject As IHelper = New Helper(a_persister__GenericPersistSystemObject.GetWriter)
+
         Sub New()
         End Sub
         Sub New(p_validator As IValidateText_DeepTools.Validator(Of ISystemComponent, IResponseValidation))
@@ -24,7 +29,7 @@ Namespace HelperFacade
             Return SystemWriter.Invoke(p_propertiesCollection)
         End Function
         Friend Function GetHelperForPersistInJson() As IHelper Implements IHelper.GetHelperForPersistInJson
-            Return New Helper(New GenericPersistSystemObject(Of ConfigSystem_IO_Json, FileAndFolders, ReadFromJson, PersistInJson)().GetWriter)
+            Return a_helper_GenericPersistSystemObject
         End Function
 
 
@@ -36,7 +41,8 @@ Namespace HelperFacade
         End Function
 
         Friend Function GetHelperForNameSystemProperty() As IHelper Implements IHelper.GetHelperForNameSystemProperty
-            Return New Helper(New GenericValidateText(Of ConfigSystemComponent_Name, ValidateText_DeepTools)().getValidator)
+
+            Return a_helper_GenericValidateText
         End Function
 
 
